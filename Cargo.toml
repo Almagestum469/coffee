@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 winit = "0.30"
 trayicon = "0.2.0"
+windows = { version = "0.48", features = ["Win32_System_Power"] }
