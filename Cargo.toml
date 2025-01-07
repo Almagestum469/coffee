@@ -7,3 +7,11 @@ edition = "2021"
 winit = "0.30"
 trayicon = "0.2.0"
 windows = { version = "0.48", features = ["Win32_System_Power"] }
+
+[package.metadata.winres]
+OriginalFilename = "coffee.exe"
+FileDescription = "Keep Awake Tool"
+ProductName = "Coffee"
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"

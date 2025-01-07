@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use trayicon::{MenuBuilder, TrayIcon, TrayIconBuilder};
 use windows::Win32::System::Power::{SetThreadExecutionState, ES_CONTINUOUS, ES_SYSTEM_REQUIRED};
 use winit::{
@@ -22,7 +24,7 @@ fn main() {
     let event_loop = EventLoop::<UserEvents>::with_user_event().build().unwrap();
     let proxy = event_loop.create_proxy();
 
-    let icon = include_bytes!("icon.ico");
+    let icon = include_bytes!("coffee.ico");
 
     let tray_icon = TrayIconBuilder::new()
         .sender(move |e: &UserEvents| {
